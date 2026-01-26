@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BamzArtikel - Project Artikel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="header-main">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">BamzArtikel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home-section">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#project1-section">Project 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#project2-section">Project 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#project3-section">Project 3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="content-wrapper container-fluid p-0">
+    
+    <section id="home-section" class="vh-100 d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up">
+        <h1>Welcome BamzArtikel</h1>
+        <img src="ibam.jpg" alt="Profile" class="profile-img" data-aos="zoom-in" data-aos-delay="200">
+        <p data-aos="fade-up" data-aos-delay="400">Website ini berisi artikel tentang tugas mini project saya di sekolah</p>
+    </section>
+
+    <section id="project1-section" class="project-container">
+        <div class="container py-5">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-8">
+                    <div class="card-project p-4" data-aos="fade-right">
+                        <h1>Project 1: Konversi Suhu</h1>
+                        <p>Fahrenheit ke Celsius</p>
+                        <input type="number" id="input-fahrenheit" class="form-control mb-3" placeholder="Masukkan Fahrenheit">
+                        <button class="btn btn-primary w-100" onclick="hitungKonversi()">Convert</button>
+                        <div class="hasil-suhu mt-3" id="hasil-konversi"></div>
+                    </div>
+
+                    <div class="mt-4 text-start" data-aos="fade-up">
+                        <p>Projek ini adalah aplikasi perhitungan sederhana yang menggunakan formula matematika dasar untuk mengubah skala suhu. Logika JavaScript: Mengambil nilai input dari pengguna, lalu memprosesnya menggunakan rumus: <span style="color: red;">(f - 32) * 5 / 9 </span> <br> Fitur Utama: Penggunaan toFixed(2) untuk memastikan hasil desimal tidak terlalu panjang (hanya 2 angka di belakang koma), sehingga tampilan tetap rapi.</p>
+                        <p>dengan source kode sebagai berikut ;</p>
+
+                        <h2>index.html ;</h2>
+                        <img src="farenheithtml.png" alt="" class="img-fluid mb-3" data-aos="zoom-in">
+                        <h2>style.css ;</h2>
+                        <img src="farenheitcss.png" alt="" class="img-fluid mb-2" data-aos="zoom-in">
+                        <img src="farenheitcss2.png" alt="" class="img-fluid mb-3" data-aos="zoom-in">
+                        <h2>script.js</h2>
+                        <img src="farenheitjs.png" alt="" class="img-fluid" data-aos="zoom-in">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container text-center mt-5" data-aos="fade-up">
+        <h1> Project2 : Manipulasi Daftar Nama (Ganjil & Genap)</h1>
+    </div>
+
+    <section id="project2-section" class="project-container-alt py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-5" data-aos="flip-left">
+                    <div id="list-wrapper" class="text-center p-4">
+                        <marquee behavior="scroll" direction="left">
+                            <h2 class="namatemen">DAFTAR NAMA SISWA SLB 09 MERDEKA TAHUN AJARAN 2026-2027.</h2>
+                        </marquee>
+                        <ol id="daftar-siswa-list">
+                            <li>1. RIPAEL</li><li>2. FAUZAN</li><li>3. NAZMU</li><li>4. ADZAN</li><li>5. MARCEL</li><li>6. ARIF</li><li>7. TORIQ</li><li>8. DEDY</li><li>9. SADAM</li><li>10. SATRIA</li><li>11. RAYAN</li><li>12. RAYHAN</li><li>13. ADILAH</li><li>14. DEWA</li><li>15. RAMBU</li><li>16. NAUVAL</li><li>17. AJI</li>
+                        </ol>
+                        <div class="btn-group-vertical w-100 gap-2">
+                            <button class="btn btn-custom-genap" onclick="filterGenap()">List Genap</button>
+                            <button class="btn btn-custom-semua" onclick="filterSemua()">List Semua</button>
+                            <button class="btn btn-custom-ganjil" onclick="filterGanjil()">List Ganjil</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8 mt-5 text-start" data-aos="fade-up">
+                    <p>Projek ini mendemonstrasikan bagaimana JavaScript dapat memanipulasi elemen HTML secara dinamis berdasarkan urutan atau indeks tertentu. <br><br>
+                    Logika JavaScript: Menggunakan perulangan (for atau forEach) untuk mengecek indeks setiap nama. Program menggunakan operator <span style="color: red;"> Modulo (%) </span> untuk menentukan apakah sebuah baris termasuk nomor ganjil atau genap.
+                    <br><br>
+                    Fitur Utama: Perubahan gaya visual (DOM Manipulation) secara instan tanpa perlu memuat ulang halaman. Tombol "List Semua" berfungsi untuk mereset tampilan ke kondisi awal.</p>
+
+                    <div id="source-code-section" class="mt-4">
+                        <h3>Source Code Projek 2 :</h3>
+                        <h2>index.html;</h2>
+                        <img src="ganjilgenap.html.png" class="img-fluid mb-3" alt="" data-aos="zoom-in"> 
+                        <h2>style.css;</h2>
+                        <img src="ganjilgenapcss.png" class="img-fluid mb-2" alt="" data-aos="zoom-in">
+                        <img src="ganjilgenapcss2.png" class="img-fluid mb-2" alt="" data-aos="zoom-in">
+                        <img src="ganjilgenapcss3.png" class="img-fluid mb-3" alt="" data-aos="zoom-in">
+                        <h2>script.js;</h2>
+                        <img src="ganjilgenapjs.png" class="img-fluid mb-2" alt="" data-aos="zoom-in">
+                        <img src="ganjilgenapjs2.png" class="img-fluid" alt="" data-aos="zoom-in">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container text-center mt-5" data-aos="fade-up">
+        <h1>projek3 : Jam Digital berubah border stiap detik</h1>
+    </div>
+
+    <section id="project3-section" class="project-container py-5">
+        <div class="container text-center">
+            <div class="jam-wrapper mx-auto" data-aos="zoom-in-up">
+                <marquee behavior="scroll" direction="left"><h1 class="judul-jam">JAM TERKINI</h1></marquee>
+                <div class="garis-pembatas">________________</div>
+                <div id="box-jam-digital">
+                    <h1 id="text-jam">00:00:00</h1>
+                </div>
+            </div>
+
+            <div class="col-md-8 mx-auto mt-5 text-start" data-aos="fade-up">
+                <p>Projek ini menampilkan jam digital yang diperbarui setiap detik, dengan efek border yang berubah warna secara dinamis. <br>
+                Logika JavaScript: Menggunakan fungsi setInterval untuk memperbarui waktu setiap detik. Menggunakan objek Date untuk mendapatkan waktu saat ini dan memformatnya menjadi string jam:menit:detik. <br>
+                Fitur Utama: Efek border yang berubah warna setiap detik menambahkan elemen visual yang menarik pada jam digital.</p>
+
+                <div id="source-code-section-3" class="mt-4">
+                    <h3>Source Code Projek 3 :</h3>
+                    <h2>index.html;</h2>
+                    <img src="jamhtml.png" class="img-fluid mb-3" alt="" data-aos="zoom-in">
+                    <h2>style.css;</h2>
+                    <img src="jamcss.png" class="img-fluid mb-2" alt="" data-aos="zoom-in">
+                    <img src="jamcss2.png" class="img-fluid mb-3" alt="" data-aos="zoom-in">
+                    <h2>script.js;</h2>
+                    <img src="jamjs2.png" class="img-fluid" alt="" data-aos="zoom-in">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container my-5 py-5" data-aos="fade-up">
+        <div class="text-center">
+            <h2 class="mb-4">Contact Me</h2>
+            <div class="d-flex flex-wrap justify-content-center gap-4">
+                <a href="mailto:ihsanhafidz@gmail.com" class="contact-link"><i class="bi bi-envelope-at"></i> Email</a>
+                <a href="https://www.instagram.com/bamajaa_" target="_blank" class="contact-link"><i class="bi bi-instagram"></i> Instagram</a>
+                <a href="https://www.tiktok.com/@bamajaa_" target="_blank" class="contact-link"><i class="bi bi-tiktok"></i> Tiktok</a>
+                <a href="https://github.com/bamajaa" target="_blank" class="contact-link"><i class="bi bi-github"></i> Github</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: false,
+    mirror: true
+  });
+</script>
+<script src="script.js"></script>
+</body>
+</html>
