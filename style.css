@@ -14,6 +14,14 @@ body {
     user-select: none;
 }
 
+.image-png {
+    width: 500px;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 #home-section {
     background-color: #f9f9f9;
 }
@@ -100,6 +108,25 @@ body {
     padding: 2px 10px;
 }
 
+#text-jam {
+    margin-left: -20px;
+}
+
+.logo-skil {
+   /* background-color: #ff0000; */
+   padding: 10px;
+   border-radius: 10px;
+   margin-left: 70px;
+}
+
+.logo-skil img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 20px;
+    gap: 10px;
+    margin-right: 150px;
+}
+
 .btn-custom-genap { background-color: blue; color: white; border-radius: 70px; }
 .btn-custom-ganjil { background-color: #ff00ff; color: white; border-radius: 70px; }
 .btn-custom-semua { background-color: #08ad31; color: white; border-radius: 70px; }
@@ -164,4 +191,19 @@ body {
         margin: 0 auto;
     }
 
+    .image-png {
+        width: 100%;
+    }
+
+    .logo-skil {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .logo-skil img {
+        margin-left: 0;
+        margin-right: 10px;
+        text-align: center;
+        width: 150px;
+    }
 }
