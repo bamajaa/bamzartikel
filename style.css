@@ -1,16 +1,23 @@
 html {
-    scroll-behavior: smooth; /* Membuat scroll ke menu menjadi halus */
+    scroll-behavior: smooth; 
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
 }
 
 section {
-    overflow: hidden; /* Mencegah munculnya scrollbar horizontal saat animasi berjalan */
+    overflow: hidden; 
     padding: 60px 0;
 }
 
 body {
     margin-top: 56px;
     overflow-x: hidden;
-    padding: 20px;
     user-select: none;
 }
 
@@ -184,6 +191,24 @@ body {
 
 .border-merah { border-color: red !important; }
 .border-biru { border-color: blue !important; }
+
+footer {
+
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+    height: 50px;
+
+    
+}
+.footer-main p {
+    margin: 20px;
+    font-size: 14px;
+    
+}
 
 @media (max-width: 768px) {
     .jam-wrapper, #list-wrapper {
