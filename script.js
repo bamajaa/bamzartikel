@@ -44,13 +44,21 @@ function jalankanJam() {
     let s = String(now.getSeconds()).padStart(2, '0');
 
     const clockElement = document.getElementById("text-jam");
-    const container = document.getElementById("box-jam-digital");
-    
-    if(clockElement) {
+    const container = document.querySelector(".jam-wrapper");
+
+    if (clockElement && container) {
         clockElement.innerText = `${h}:${m}:${s}`;
-        container.className = (parseInt(s) % 2 !== 0) ? "border-biru" : "border-merah";
+
+        if (parseInt(s) % 2 !== 0) {
+            container.classList.add("border-biru");
+            container.classList.remove("border-merah");
+        } else {
+            container.classList.add("border-merah");
+            container.classList.remove("border-biru");
+        }
     }
 }
 
 setInterval(jalankanJam, 1000);
 jalankanJam();
+
